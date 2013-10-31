@@ -89,8 +89,8 @@ sub execute {
   $context->apply_givens();
   $context->apply_whens();
   my $exceptions = $context->exceptions();
-  my @failed = $context->apply_invariants($exceptions);
-  push @failed, grep { not $_->execute($exceptions) } @{ $self->{checks} };
+  my @failed = grep { not $_->execute($exceptions) } @{ $self->{checks} };
+  push @failed, $context->apply_invariants($exceptions);
   my $passed = not @failed;
   ok($passed, name($self->{checks}));
   diag(message(\@failed)) unless $passed;

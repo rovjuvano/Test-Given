@@ -182,20 +182,4 @@ sub define_var {
   *{$package . $name} = $value;
 }
 
-sub dump_symbol_table {
-  my ($table) = @_;
-  my %h;
-  no strict 'refs';
-  foreach my $key (keys %$table) {
-    $h{$key} = {};
-    my $v = *{ $table->{$key} }{SCALAR};
-    $h{$key}->{SCALAR} = $v if defined $$v;
-    map {
-      my $v = *{ $table->{$key} }{$_};
-      $h{$key}->{$_} = $v if defined $v;
-    } qw(ARRAY HASH CODE FORMAT IO);
-  }
-  warn Data::Dumper->new([\%h])->Deepcopy(1)->Sortkeys(1)->Dump();
-}
-
 1;

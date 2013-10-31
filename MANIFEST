@@ -1,0 +1,10 @@
+Changes
+lib/Test/Given.pm
+lib/Test/Given/Aspect.pm
+lib/Test/Given/Builder.pm
+lib/Test/Given/Check.pm
+lib/Test/Given/Context.pm
+Makefile.PL
+MANIFEST			This list of files
+README
+t/syntax.t
