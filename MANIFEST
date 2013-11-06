@@ -35,3 +35,4 @@ t/t/order-in-context-nested.t
 t/t/order-in-context.t
 t/t/simple-test.t
 t/variable-assignment.t
+MANIFEST.SKIP
