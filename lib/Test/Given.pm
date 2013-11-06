@@ -11,7 +11,7 @@ BEGIN {
   our @EXPORT = qw(describe context Given When Then And Invariant onDone has_failed);
 }
 
-use version; our $VERSION = qv('0.3.0');
+use version; our $VERSION = qv('0.3.1');
 
 my $context = Test::Given::Context->new('** TOPLEVEL **');
 sub describe {
