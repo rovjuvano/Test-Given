@@ -19,6 +19,7 @@ describe 'Output of failing tests' => sub {
   Then sub { contains($lines, qr/#   \&sub\(\) eq \(keys \%\$hash\)\[0\]/) };
   And  sub { contains($lines, qr/#     a sub\t<- \&sub\(\)/) };
   And  sub { contains($lines, qr/#     a\t<- \(keys \%\$hash\)\[0\]/) };
+  And  sub { warn map { "### $_" } @$lines; 1 };
 
   context 'with return keyword' => sub {
     Then sub { contains($lines, qr/#     1\t<- \$a/) };
