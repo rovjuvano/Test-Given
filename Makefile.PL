@@ -14,6 +14,11 @@ WriteMakefile(
         'parent'     => 0,
         'version'    => 0.77,
     },
+    META_MERGE => {
+        bugtracker => 'https://github.com/rovjuvano/Test-Given/issues',
+        homepage   => 'https://github.com/rovjuvano/Test-Given',
+        repository => 'git://github.com/rovjuvano/Test-Given.git',
+    },
     dist                => { COMPRESS => 'gzip -9f', SUFFIX => 'gz', },
     clean               => { FILES => 'Test-Given-*' },
 );
