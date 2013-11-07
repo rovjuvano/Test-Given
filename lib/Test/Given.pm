@@ -214,9 +214,9 @@ Test output conforms to TAP (Test::Builder used under the hood).
 
 Output includes describe/context descriptions when verbose is enabled (-v to prove).
 
-Tests are named after the first line of the Then. The code has been decompiled at this point and may differ from the actual source. Contributions welcome.
+Tests are named after the last line of the Then. The code has been decompiled at this point and may differ from the actual source. Contributions welcome.
 
-To aid diagnosing failing tests, the output includes the decompiled source code of the failing Then, And, or Invariant with the starting line number and filename. Output does not include the values of accessed variables or expressions. Contributions welcome.
+To aid diagnosing failing tests, the output includes the decompiled source code of the failing Then, And, or Invariant with the starting line number and filename. If the last line looks like a comparison, an attempt is made to display the value of each side. Values of subexpressions are not included. Contributions welcome.
 
 =head1 AUTHOR
 

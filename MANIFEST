@@ -16,6 +16,7 @@ t/no-context.t
 t/omitted-then.t
 t/order-in-context-nested.t
 t/order-in-context.t
+t/output.t
 t/package.t
 t/t/die-and-context.t
 t/t/die-and-file.t
@@ -32,6 +33,7 @@ t/t/failing-then.t
 t/t/omitted-then.t
 t/t/order-in-context-nested.t
 t/t/order-in-context.t
+t/t/output.t
 t/t/simple-test.t
 t/test_helper.pl
 t/variable-assignment.t

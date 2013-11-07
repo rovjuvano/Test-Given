@@ -17,6 +17,7 @@ sub run_spec {
 
 sub contains {
   my ($lines, $re, $name) = @_;
-  !!grep { $_ =~ $re } @$lines;
+  scalar grep { $_ =~ $re } @$lines;
 }
+
 1;
