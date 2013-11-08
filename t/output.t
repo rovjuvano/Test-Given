@@ -16,9 +16,9 @@ describe 'Output of failing tests' => sub {
   And  sub { contains($lines, qr/#     2\t<- "\$hash->\{'b'\}"/) };
   And  sub { contains($lines, qr/#     3\t<- "\$array->\[2\]"/) };
 
-  Then sub { contains($lines, qr/#   \&sub\(\) eq \(keys \%\$hash\)\[0\]/) };
+  Then sub { contains($lines, qr/#   \&sub\(\) eq \(sort keys \%\$hash\)\[0\]/) };
   And  sub { contains($lines, qr/#     a sub\t<- \&sub\(\)/) };
-  And  sub { contains($lines, qr/#     a\t<- \(keys \%\$hash\)\[0\]/) };
+  And  sub { contains($lines, qr/#     a\t<- \(sort keys \%\$hash\)\[0\]/) };
 
   context 'with return keyword' => sub {
     Then sub { contains($lines, qr/#     1\t<- \$a/) };

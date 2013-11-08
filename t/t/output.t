@@ -10,7 +10,7 @@ describe 'Output in package main::' => sub {
   Given '&sub' => sub { sub { 'a sub' } };
   Then sub { $hash->{a} == $array->[1] };
   Then sub { "$hash->{b}" eq "$array->[2]" };
-  Then sub { &sub() eq (keys(%$hash))[0] };
+  Then sub { &sub() eq (sort keys(%$hash))[0] };
 };
 
 package mypackage;
